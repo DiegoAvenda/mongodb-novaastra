@@ -26,7 +26,7 @@
 <div class="navbar bg-base-100">
 	<div class="flex-1">
 		<a href="/" class="btn btn-ghost normal-case text-xl">Novastra</a>
-		<a href="/menu" class="btn btn-ghost normal-case text-xl">Readings</a>
+		<a href="/readings" class="btn btn-ghost normal-case text-xl">Readings</a>
 		<a href="/signup" class="btn btn-ghost normal-case text-xl">Signup</a>
 	</div>
 	<div class="flex-none">
