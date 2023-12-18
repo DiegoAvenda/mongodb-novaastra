@@ -1,6 +1,6 @@
 import { redirect } from '@sveltejs/kit';
 import { OAuth2Client } from 'google-auth-library';
-import { SECRET_CLIENT_ID, SECRET_CLIENT_SECRET } from '$env/static/private';
+import { SECRET_GOOGLE_CLIENT_ID, SECRET_GOOGLE_CLIENT_SECRET } from '$env/static/private';
 import { dbConn } from '$lib/utils/mongo';
 
 async function getUserData(access_token, setUserAuthToken) {
@@ -32,8 +32,8 @@ export const GET = async ({ url, cookies }) => {
 	const code = await url.searchParams.get('code');
 	try {
 		const oAuth2Client = new OAuth2Client(
-			SECRET_CLIENT_ID,
-			SECRET_CLIENT_SECRET,
+			SECRET_GOOGLE_CLIENT_ID,
+			SECRET_GOOGLE_CLIENT_SECRET,
 			'http://localhost:5173/oauth'
 		);
 		const resp = await oAuth2Client.getToken(code);

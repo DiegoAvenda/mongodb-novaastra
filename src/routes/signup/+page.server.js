@@ -1,12 +1,12 @@
-import { SECRET_CLIENT_ID, SECRET_CLIENT_SECRET } from '$env/static/private';
+import { SECRET_GOOGLE_CLIENT_ID, SECRET_GOOGLE_CLIENT_SECRET } from '$env/static/private';
 import { OAuth2Client } from 'google-auth-library';
 import { redirect } from '@sveltejs/kit';
 
 export const actions = {
 	default: async () => {
 		const oAuth2Client = new OAuth2Client(
-			SECRET_CLIENT_ID,
-			SECRET_CLIENT_SECRET,
+			SECRET_GOOGLE_CLIENT_ID,
+			SECRET_GOOGLE_CLIENT_SECRET,
 			'http://localhost:5173/oauth'
 		);
 

@@ -27,6 +27,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"google-auth-library": "^9.4.1"
+		"google-auth-library": "^9.4.1",
+		"mongodb": "^6.3.0"
 	}
 }
